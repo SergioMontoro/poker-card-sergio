@@ -1,1 +1,16 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
+
+.hearts,
+.diamonds {
+  color: red;
+}
+
+.card {
+  height: 400px;
+  width: 300px;
+  font-size: 75px;
+}
+
+#card-bottom-suit {
+  transform: rotate(0.5turn);
+}

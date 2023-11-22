@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <title>Random Poker Card Generator</title>
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
@@ -13,17 +14,44 @@
     <link rel="shortcut icon" href="./4geeks.ico" />
   </head>
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div
+      class="container-fluid d-flex flex-column justify-content-center align-items-center vh-100 bg-success"
+    >
+      <div class="height-input d-flex flex-column mb-5">
+        <input
+          type="text"
+          name="height"
+          class="p-2"
+          id="height-input"
+          min="250"
+          max="800"
+          placeholder="   Introduce la altura (px)"
+        />
       </div>
+
+      <div class="card px-3" id="card">
+        <div
+          class="card-top h-25 d-flex justify-content-start align-items-center"
+        >
+          <span id="card-top-suit"></span>
+        </div>
+
+        <div
+          class="card-body h-50 d-flex justify-content-center align-items-center"
+        >
+          <span id="card-body-number"></span>
+        </div>
+
+        <div
+          class="card-bottom h-25 d-flex justify-content-end align-items-center"
+        >
+          <span id="card-bottom-suit"></span>
+        </div>
+      </div>
+
+      <button type="button" class="btn btn-dark mt-5" onClick="window.onload()">
+        Genera una carta nueva
+      </button>
     </div>
   </body>
 </html>
